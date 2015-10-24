@@ -1,0 +1,70 @@
+@import "mixinCommon";
+
+$toolbarSize: 52px;
+$bottom: 30px;
+@mixin toolbar-item($pos, $hoverPos){
+	background-position: 0 $pos;
+	&:hover {
+		background-position: 0 $hoverPos;
+	}
+}
+.toolbar {
+	position: fixed;
+	left: 90%;
+	bottom: $bottom;
+	margin-left: -$toolbarSize / 2;
+}
+.toolbar-item{
+	position: relative;
+	width: $toolbarSize;
+	height: $toolbarSize;
+	display: block;
+	margin-top: 2px;
+	@include transition(background-position 0.5s);
+}
+.toolbar-item, .toolbar-layer {
+	background: url(../img/toolbar.png) no-repeat;
+}
+
+.toolbar-item-weixin {
+	@include toolbar-item( -798px, -860px);
+	&:hover {
+		.toolbar-layer {
+			height: 202px;
+			background-position: 0 10;
+		
+			@include opacity(1);
+			@include scale(1);
+		}
+	}
+}
+
+.toolbar-item-feedback {
+	@include toolbar-item(-426px, -488px);
+}
+.toolbar-item-app {
+	@include toolbar-item(-550px, -612px);
+	&:hover {
+		.toolbar-layer {
+			height: 180px;
+			background-position: 0 -232px;
+			
+			@include opacity(1);
+			@include scale(1);
+		}
+	}
+
+}
+.toolbar-item-top {
+	@include toolbar-item(-674px, -736px);
+}
+.toolbar-layer {
+	position: absolute;
+	right: $toolbarSize - 5;
+	bottom: -10px;
+	width: 172px;
+	@include opacity(0);
+	@include transform-origin(90% 90%);
+	@include scale(0.01);
+	@include transition(all 0.1s);
+}

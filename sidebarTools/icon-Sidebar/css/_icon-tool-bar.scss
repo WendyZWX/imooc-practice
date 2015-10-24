@@ -1,0 +1,81 @@
+$toolbarSize: 52px;
+.toolbar-item, .toolbar-btn,.toolbar-icon,.toolbar-text {
+	width: $toolbarSize;
+    height: $toolbarSize;
+}
+.toolbar-icon, .toolbar-text {
+	position: absolute;
+    left: 0;
+	@include transition(top 0.5s);
+    color: #fff;
+	text-align:center;
+	
+}
+.toolbar {
+	position: fixed;
+	left: 90%;
+	bottom: 20px;
+	margin-left: -$toolbarSize / 2;
+}
+.toolbar-item {
+    position: relative;
+    display: block;
+    margin-top: 1px;
+
+    &:hover {
+    	.toolbar-icon {
+    	    top: -$toolbarSize;
+    	}
+    	.toolbar-text {
+    		top: 0;
+    	}
+
+    	.toolbar-layer {
+    		@include opacity(1);
+			@include scale(1);
+    	}
+    }
+	
+}
+.toolbar-btn {
+	position: absolute;
+	left: 0;
+	top: 0;
+	overflow: hidden;
+	
+}
+.toolbar-icon {
+    top: 0;
+	background-color: #d0d6d9;
+	font-size: 30px;
+	line-height: $toolbarSize;
+}
+.toolbar-text {
+	top: $toolbarSize;
+	background-color: #939393;
+	padding-top: 10px;
+	font-size: 14px;
+	font-size: bold;
+	line-height: 1.3;
+}
+.toolbar-layer {
+	position: absolute;
+	right: $toolbarSize - 6;
+	bottom: -10px;
+	width: 172px;
+	background-image: url(http://static.mukewang.com/static/img/common/elevator.png);
+	background-repeat: no-repeat;
+	@include transform-origin(95% 95%);
+	@include opacity(0);
+	@include scale(0.001);
+	@include transition(all 0.5s);
+	
+}
+.toolbar-layer-weixin {
+	height: 212px;
+	background-position: 0 0;
+}
+.toolbar-layer-app {
+	height: 194px;
+	background-position: 0 -212px; 
+}

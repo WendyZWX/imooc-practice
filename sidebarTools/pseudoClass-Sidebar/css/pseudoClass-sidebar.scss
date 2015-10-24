@@ -1,0 +1,141 @@
+@import "pseudoClass-mixinCommon";
+$toolbarSize: 52px;
+
+.toolbar {
+	position: fixed;
+	left: 50%;
+	bottom: 40px;
+	margin-left: -$toolbarSize / 2;
+}
+.toolbar-item {
+	position: relative;
+	display: block;
+	width: $toolbarSize;
+	height: $toolbarSize;
+	margin-top: 1px;
+
+	&:hover {
+		.toolbar-btn {
+			&:before {
+				top: -$toolbarSize;
+			}
+			&:after {
+				top: 0;
+			}
+		}
+		&:after {
+			@include opacity(1);
+			@include scale(1);
+		}
+	}
+	&:after {    //二维码
+		content: "";    //必须写，否则不起作用
+		position: absolute;
+		right: $toolbarSize - 6;
+		bottom: -10px;
+		width: 172px;
+		background-image: url(../img/toolbar_img.png);
+		background-repeat: no-repeat;
+		@include opacity(0);
+		@include transform-origin(95% 95%);
+		@include scale(0.001);
+		@include transition(all 0.5s);
+	}
+}
+.toolbar-item-weixin {
+	&:after {
+		content: "";
+		height: 212px;
+		background-position: 0 0;
+	}
+	.toolbar-btn {
+		&:before {
+			content: "\e802";
+		}
+		&:after {
+			content: "公众\A账号";
+		}
+	}
+}
+.toolbar-item-feedback {
+	.toolbar-btn {
+		&:before {
+			content: "\e800";
+		}
+		&:after {
+			content: "意见\A反馈";
+		}
+	}
+}
+.toolbar-item-app {
+	&:after {
+		content: "";
+		height: 194px;
+		background-position: 0 -222px;
+	}
+	.toolbar-btn {
+		&:before {
+			content: "\e801";
+		}
+		&:after {
+			content: "APP\A下载";
+		}
+	}
+}
+.toolbar-item-top {
+	.toolbar-btn {
+		&:before {
+			content: "\e803";
+		}
+		&:after {
+			content: "返回\A顶部";
+		}
+	}
+}
+.toolbar-btn {
+	&, &:before, &:after {
+		width: $toolbarSize;
+		height: $toolbarSize;
+		position: absolute;
+		left: 0;
+	}
+	&:before, &:after {
+		content: "";
+		color: #fff;
+		text-align: center;
+		@include transition(top 0.5s);
+	}
+	top: 0;
+	overflow: hidden;
+
+	//icon style from style.css
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+	&:before {  //icon
+		top: 0;
+		background-color:#d0d6d9;
+		font-size: 30px;
+		line-height: $toolbarSize;
+	}
+	&:after {   //text
+		top: $toolbarSize;
+		background-color: #98a1a6;
+		padding-top: 12px;
+		font-size: 12px;
+		line-height: 1.2;
+		white-space: pre;
+	}
+}
+
+//优点：避免图片的使用，节约性能， HTML结构简化
+//缺点： css复杂，不支持IE6,7
