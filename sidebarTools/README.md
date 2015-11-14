@@ -1,6 +1,6 @@
 ### 来自： [慕课网-侧栏工具条开发](http://www.imooc.com/learn/425)
 
-### Demo: [Click here](https://guihailiuli.github.io/myDemo/imooc/sidebarTools/pseudoClass-Sidebar/pseudoClass-sidebar.html)
+### Demo: [Click here](https://huanyouchen.github.io/demo/imooc/sidebarTools/pseudoClass-Sidebar/pseudoClass-sidebar.html)
 
 **主要知识点：**
 + **SASS**

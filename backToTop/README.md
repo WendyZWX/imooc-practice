@@ -1,6 +1,6 @@
 #### 来自：[慕课网-回到顶部效果](http://www.imooc.com/learn/65)
 
-#### Demo: [Click here](https://guihailiuli.github.io/myDemo/imooc/backToTop/backToTop.html)
+#### Demo: [Click here](https://huanyouchen.github.io/demo/imooc/backToTop/backToTop.html)
 
 **总结：**
 
