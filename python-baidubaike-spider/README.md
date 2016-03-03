@@ -1,5 +1,5 @@
 #### 来自：[慕课网-Python开发简单爬虫](http://www.imooc.com/learn/563)
-#### 爬取结果页面，以百科python为例，爬取10条连接：[在百度百科中爬取相关数据](http://huanyouchen.github.io/demo/imooc/python-baidubaike-spider/baike_spider_output.html)
+#### 爬取结果页面展示，以百度百科python为例，爬取结果：[在百度百科中爬取python相关数据](http://huanyouchen.github.io/demo/imooc/python-baidubaike-spider/baike_spider_output.html)
 
 **主要知识点：**
 
