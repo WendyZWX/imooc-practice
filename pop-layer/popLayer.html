@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>慕课网-弹出层效果</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/pop.css">
+</head>
+<body>
+  <div id="header">
+  	<div class="container" id="nav">
+  		<h1 id="logo"><a href="/">慕课网</a></h1>
+  		<ul class="l" id="nav-item">
+  			<li><a href="/course/list">课程</a></li>
+  		</ul>
+  		<div id="login-area">
+  		  <button id="btnLogin" hidefocus="true" class="login-btn">登录</button>
+  		</div>
+  	</div>
+  </div>
+
+  <div id="main">
+    <div class="slider-container">
+      <div id="slider">
+        <ul id="sliderUl">
+          <li id="bg01"></li>
+        </ul>
+        <div id="dotBox"><span class=""></span><span class="active"></span><span class=""></span></div>
+      </div>
+      <div id="discripcontainer">
+        <div class="discripbg"></div>
+        <div class="discrip">
+          <h3>换一种方式</h3>
+          <h2>来学习互联网编程</h2>
+          <h4>超酷的IT技术免费学习平台</h4>
+          <div class="btnarea"> <a id="enterbtn" href="/course/list">进入</a> <a id="learnmore" href="javascript:;">了解更多</a> </div>
+        </div>
+      </div>
+    </div>
+    <a href="/course/list" id="enterbtn-large">点击进入</a>
+
+  </div>
+  <script src="js/pop.js"></script>
+</body>
+</html>
