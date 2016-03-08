@@ -2,6 +2,8 @@
 
 **爬虫演示结果**: 
 
+![img](https://github.com/guihailiuli/imooc-practice/blob/master/the-basis-of-Node.js-first-stage/imooc-chapter-crawler-by-nodejs/imooc-chapter-crawler.PNG)
+
 
 
 
