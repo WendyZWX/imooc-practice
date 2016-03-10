@@ -2,17 +2,16 @@ var http = require('http');
 var querystring = require('querystring');
 var postData = querystring.stringify({
 	'content': '老师下次更新什么时候啊?',
-	'cid': 348,
+	'mid': 8837,
 });
 
 var options = {
 	hostname: 'www.imooc.com',
 	port: 80,
-	path: '/course/docoment',
+	path: '/course/docomment',
 	method: 'POST',
 	headers: {
-		//headers中的数据请从自己的浏览器中获取，
-		//获取方法见视频http://www.imooc.com/video/8837
+	  //这部分需要自己的数据，具体方法见视频教程
 	}
 };
 
