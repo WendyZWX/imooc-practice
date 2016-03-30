@@ -21,19 +21,17 @@
 		//定义旋转的标示
 		this.rotateFlag = true; 
 
-
-
 		//配置默认参数
 		this.setting = {
 			"width" : 1000,               //幻灯片的宽度
-            "height" : 270,               //幻灯片的高度
-            "posterWidth" : 640,          //幻灯片第一帧的宽度
-            "posterHeight" : 270,         //幻灯片第一帧的高度
-            "verticalAlign" : "middle",   
-            "scale" : 0.8,               //记录显示的比例关系90%
-            "speed" : 1000,
-            "autoPlay" : false,
-            "delay" : 1000        //自动播放的间隔时间
+                        "height" : 270,               //幻灯片的高度
+                        "posterWidth" : 640,          //幻灯片第一帧的宽度
+                        "posterHeight" : 270,         //幻灯片第一帧的高度
+                        "verticalAlign" : "middle",   
+                        "scale" : 0.8,               //记录显示的比例关系90%
+                        "speed" : 1000,
+                        "autoPlay" : false,
+                        "delay" : 1000        //自动播放的间隔时间
 		};
 		$.extend(this.setting, this.getSetting());
 
@@ -128,12 +126,12 @@
             		    top = next.css("top");
             		    zIndexArr.push(zIndex);
             		    self.animate({
-            			    width:width,
-						    height:height,
-						    // zIndex:zIndex,
-						    opacity:opacity,
-						    left:left,
-						    top:top
+            			   width:width,
+				   height:height,
+				   // zIndex:zIndex,
+				   opacity:opacity,
+				   left:left,
+				   top:top
             		    }, _this_.setting.speed, function() {
             		    	_this_.rotateFlag = true;
             		    });
